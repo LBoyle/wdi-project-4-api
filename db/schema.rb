@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170601124507) do
+ActiveRecord::Schema.define(version: 20170602143526) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "parts", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "price"
+    t.text "spec"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parts_parttypes", id: false, force: :cascade do |t|
+    t.bigint "part_id", null: false
+    t.bigint "parttype_id", null: false
+  end
+
+  create_table "parts_rigs", id: false, force: :cascade do |t|
+    t.bigint "rig_id", null: false
+    t.bigint "part_id", null: false
+  end
+
+  create_table "parttypes", force: :cascade do |t|
+    t.string "parttype"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rigs", force: :cascade do |t|
+    t.text "description"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_rigs_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -21,6 +55,8 @@ ActiveRecord::Schema.define(version: 20170601124507) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "rank"
   end
 
+  add_foreign_key "rigs", "users"
 end
