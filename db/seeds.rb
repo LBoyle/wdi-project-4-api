@@ -46,42 +46,25 @@ rig2.parts << ram2
 
 mobo1.incompatibilities << mobo2
 mobo1.incompatibilities << cpu2
-mobo1.incompatibilities << gpu2
 mobo1.incompatibilities << ram2
 
 cpu1.incompatibilities << mobo2
 cpu1.incompatibilities << cpu2
-cpu1.incompatibilities << gpu2
 cpu1.incompatibilities << ram2
-
-gpu1.incompatibilities << mobo2
-gpu1.incompatibilities << cpu2
-gpu1.incompatibilities << gpu2
-gpu1.incompatibilities << ram2
 
 ram1.incompatibilities << mobo2
 ram1.incompatibilities << cpu2
-ram1.incompatibilities << gpu2
 ram1.incompatibilities << ram2
-
 
 
 mobo2.incompatibilities << mobo1
 mobo2.incompatibilities << cpu1
-mobo2.incompatibilities << gpu1
 mobo2.incompatibilities << ram1
 
 cpu2.incompatibilities << mobo1
 cpu2.incompatibilities << cpu1
-cpu2.incompatibilities << gpu1
 cpu2.incompatibilities << ram1
-
-gpu2.incompatibilities << mobo1
-gpu2.incompatibilities << cpu1
-gpu2.incompatibilities << gpu1
-gpu2.incompatibilities << ram1
 
 ram2.incompatibilities << mobo1
 ram2.incompatibilities << cpu1
-ram2.incompatibilities << gpu1
 ram2.incompatibilities << ram1
