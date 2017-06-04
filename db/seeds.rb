@@ -9,8 +9,8 @@
 admin = User.create!(username: "Louis", email: "louis@louis.com", password: "password", password_confirmation: "password", rank: "admin")
 User.create!(username: "John", email: "john@john.com", password: "password", password_confirmation: "password", rank: "standard")
 
-cpuType = Parttype.create!(parttype: "cpu", description: "Central Processing Unit")
 moboType = Parttype.create!(parttype: "mobo", description: "Motherboard")
+cpuType = Parttype.create!(parttype: "cpu", description: "Central Processing Unit")
 gpuType = Parttype.create!(parttype: "gpu", description: "Graphics Card")
 ramType = Parttype.create!(parttype: "ram", description: "Random Access Memory")
 
