@@ -15,7 +15,7 @@ class RigsController < ApplicationController
 
   # POST /rigs
   def create
-    @rig = Rig.new(rig_params)
+    @rig = @current_user.rigs.new(rig_params)
 
     if @rig.save
       render json: @rig, status: :created, location: @rig
@@ -46,6 +46,6 @@ class RigsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def rig_params
-      params.require(:rig).permit(:description, :user_id)
+      params.require(:rig).permit(:description, :user_id, part_ids: [])
     end
 end
