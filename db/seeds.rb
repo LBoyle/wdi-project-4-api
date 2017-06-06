@@ -6,8 +6,11 @@ moboType = Parttype.create!(parttype: "mobo", description: "Motherboard")
 cpuType = Parttype.create!(parttype: "cpu", description: "Central Processing Unit")
 gpuType = Parttype.create!(parttype: "gpu", description: "Graphics Card")
 ramType = Parttype.create!(parttype: "ram", description: "Random Access Memory")
-driveType = Parttype.create!(parttype: "sataDrive", description: "Drives")
+driveType = Parttype.create!(parttype: "drive", description: "Drive")
 psuType = Parttype.create!(parttype: "psu", description: "Power supply unit")
+coolerType = Parttype.create!(parttype: "cooler", description: "CPU Cooler")
+nicType = Parttype.create!(parttype: "nic", description: "Network Card")
+cddType = Parttype.create!(parttype: "cdd", description: "Optical Disk Drive")
 
 
 
@@ -26,7 +29,7 @@ mobo5 = Part.create!(name: "MSI X99A GODLIKE Intel", description: "MSI High end 
 cpu1 = Part.create!(name: "AMD FX6300", description: "AMD mid-tier six core cpu", price: 72, spec: "Cores: 6\nClock speed: 3.5GHz\nAM3+ socket")
 cpu2 = Part.create!(name: "Intel Core i7-5960X", description: "Intel maxed out Extreme Edition 8c/16t cpu", price: 1200, spec: "Cores: 8\nThreads: 16\nClock speed: 3.0 to 3.5GHz \nLGA2011-v3 socket")
 cpu3 = Part.create!(name: "Intel Core i7-7700K", description: "7th gen 4c8t desperate for cash", price: 305, spec: "Cores: 4\nThreads: 8\nClock speed: 4.2 to 4.5GHz\nFCLGA1151 socket\n")
-cpu4 = Part.create!(name: "Intel Xeon E5-4669V3", description: "The best multicore cpu ever released to date, server grade, adapted for enthusiasts", price: 7000, spec: "Cores: 18\nThreads: 36\nClock speed: 2.1 to 2.9GHz\nLGA2011-v3 socket\n40 pci-e lanes")
+cpu4 = Part.create!(name: "Intel Xeon E5-4669V3", description: "Among the best multicore cpus ever released to date, server grade, adapted for enthusiasts", price: 7000, spec: "Cores: 18\nThreads: 36\nClock speed: 2.1 to 2.9GHz\nLGA2011-v3 socket\n40 pci-e lanes")
 cpu5 = Part.create!(name: "Intel Core i7 6800K", description: "High end Intel consumer CPU", price: 440, spec: "Cores: 6\nThreads: 12\nClock speed: 3.4 to 3.6GHz\nLGA2011-v3 socket\n28 pci-e lanes")
 
 
@@ -44,6 +47,12 @@ gpu4 = Part.create!(name: "Nvidia Quadro GP100", description: "One of Nvidia's h
 psu1 = Part.create!(name: "Corsair VS550 ATX", description: "Standard high efficiency Power Supply", price: 40, spec: "550Watt")
 psu2 = Part.create!(name: "Corsair HX1000 ATX", description: "High output high efficiency Power Supply", price: 189, spec: "1000Watt")
 psu3 = Part.create!(name: "Novatech 850W ATX", description: "Novatech 850W ATX power supply", price: 75, spec: "850Watt")
+
+cooler1 = Part.create!(name: "Coolermaster Hyper 212 EVO", description: "Low cost cooler for the average user", price: 25, spec: "4 Copper heatpipes\nAll modern sockets\nHeight: 159mm")
+cooler1 = Part.create!(name: "Noctua NH-D15 Dual Radiator", description: "High end low noise ", price: 25, spec: "4 Copper heatpipes\nAll modern sockets\nHeight: 159mm")
+
+
+# create pre-made machines
 
 rig1 = Rig.create!(description: "Mid range budget AMD gaming rig", user_id: admin1.id)
 rig2 = Rig.create!(description: "High end Intel gaming rig", user_id: admin1.id)
@@ -93,7 +102,6 @@ rig2.parts << mobo2
 rig2.parts << gpu2
 rig2.parts << ram2
 rig2.parts << sata3
-rig2.parts << sata2
 rig2.parts << psu3
 
 rig3.parts << cpu3
@@ -101,7 +109,6 @@ rig3.parts << mobo3
 rig3.parts << gpu3
 rig3.parts << ram3
 rig3.parts << ssdM21
-rig3.parts << sata2
 rig3.parts << psu2
 
 rig4.parts << cpu4
@@ -109,9 +116,6 @@ rig4.parts << mobo4
 rig4.parts << gpu4
 rig4.parts << ram4
 rig4.parts << ssdM21
-rig4.parts << sata1
-rig4.parts << sata1
-rig4.parts << sata1
 rig4.parts << psu2
 
 # assigning incompatibilities
