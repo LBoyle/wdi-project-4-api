@@ -11,8 +11,13 @@ psuType = Parttype.create!(parttype: "psu", description: "Power supply unit")
 coolerType = Parttype.create!(parttype: "cooler", description: "CPU Cooler")
 nicType = Parttype.create!(parttype: "nic", description: "Network Card")
 oddType = Parttype.create!(parttype: "odd", description: "Optical Disk Drive")
+caseType = Parttype.create!(parttype: "case", description: "Tower Case")
 
 
+
+case1 = Part.create!(name: "Phanteks Eclipse P400 Tempered grey", description: "Tempered glass panel", price: 75, spec: "ATX\n6x 3.5\"\n2x 2.5\"\n2x USB 3.0\n2x 120mm fan\nPSU not included\ntransparent side panel\ngrey")
+case2 = Part.create!(name: "Vultech CUBE-X1B White", description: "Small and sturdy", price: 32, spec: "Plexiglass\nStainless steel\nTop\n1x 120 mm\nMicro-ATX\nMini-ATX")
+case3 = Part.create!(name: "Coolermaster Cosmos 2 Ultra Ultimate", description: "Massive", price: 305, spec: "SSI-EEB\nEATX\nATX\nUSB3.0\nMany fans\nSuch drives\nSo space")
 
 sata1 = Part.create!(name: "Sandisk Ultra II 240GB", description: "Standard 2.5\" SSD", price: 67, spec: "2.5\"\nSATA-3\n240GB\nRead: 450 MBs\nWrite: 450 MBs")
 sata2 = Part.create!(name: "WD Black 1TB", description: "3.5\" Storage drive", price: 71, spec: "3.5\"\nSATA-3\n1TB\nRead and Write appx 50 MBs")
@@ -28,7 +33,7 @@ mobo5 = Part.create!(name: "MSI X99A GODLIKE Intel", description: "MSI High end 
 
 cpu1 = Part.create!(name: "AMD FX6300", description: "AMD mid-tier six core cpu", price: 72, spec: "Cores: 6\nClock speed: 3.5GHz\nAM3+ socket")
 cpu2 = Part.create!(name: "Intel Core i7-5960X", description: "Intel maxed out Extreme Edition 8c/16t cpu", price: 1200, spec: "Cores: 8\nThreads: 16\nClock speed: 3.0 to 3.5GHz \nLGA2011-v3 socket")
-cpu3 = Part.create!(name: "Intel Core i7-7700K", description: "7th gen 4c8t desperate for cash", price: 305, spec: "Cores: 4\nThreads: 8\nClock speed: 4.2 to 4.5GHz\nFCLGA1151 socket\n")
+cpu3 = Part.create!(name: "Intel Core i7-7700K", description: "7th gen 4c/8t desperate for cash", price: 305, spec: "Cores: 4\nThreads: 8\nClock speed: 4.2 to 4.5GHz\nFCLGA1151 socket\n")
 cpu4 = Part.create!(name: "Intel Xeon E5-4669V3", description: "Among the best multicore cpus ever released to date, server grade, adapted for enthusiasts", price: 7000, spec: "Cores: 18\nThreads: 36\nClock speed: 2.1 to 2.9GHz\nLGA2011-v3 socket\n40 pci-e lanes")
 cpu5 = Part.create!(name: "Intel Core i7 6800K", description: "High end Intel consumer CPU", price: 440, spec: "Cores: 6\nThreads: 12\nClock speed: 3.4 to 3.6GHz\nLGA2011-v3 socket\n28 pci-e lanes")
 
@@ -57,10 +62,10 @@ nic1 = Part.create!(name: "Some network card", description: "Network interface c
 
 # create pre-made machines
 
-rig1 = Rig.create!(description: "Mid range budget AMD gaming rig", user_id: admin1.id)
-rig2 = Rig.create!(description: "High end Intel gaming rig", user_id: admin1.id)
-rig3 = Rig.create!(description: "Mid range Intel gaming rig", user_id: user1.id)
-rig4 = Rig.create!(description: "Enthusiast grade Intel workstation rig", user_id: admin1.id)
+rig1 = Rig.create!(description: "Mid range budget AMD gaming PC", user_id: admin1.id)
+rig2 = Rig.create!(description: "High end Intel gaming PC", user_id: admin1.id)
+rig3 = Rig.create!(description: "Mid range Intel gaming PC", user_id: user1.id)
+rig4 = Rig.create!(description: "Enthusiast grade Intel workstation PC", user_id: admin1.id)
 
 # assigning types
 
@@ -97,6 +102,9 @@ driveType.parts << ssdM21
 psuType.parts << psu1
 psuType.parts << psu2
 psuType.parts << psu3
+caseType.parts << case1
+caseType.parts << case2
+caseType.parts << case3
 
 # creating pre-builts
 
@@ -108,6 +116,7 @@ rig1.parts << sata1
 rig1.parts << psu1
 rig1.parts << cooler2
 rig1.parts << odd1
+rig1.parts << case1
 
 rig2.parts << cpu2
 rig2.parts << mobo2
@@ -116,6 +125,7 @@ rig2.parts << ram2
 rig2.parts << sata3
 rig2.parts << psu3
 rig2.parts << cooler2
+rig2.parts << case1
 
 rig3.parts << cpu3
 rig3.parts << mobo3
@@ -126,6 +136,7 @@ rig3.parts << psu2
 rig3.parts << cooler2
 rig3.parts << odd1
 rig3.parts << nic1
+rig3.parts << case2
 
 rig4.parts << cpu4
 rig4.parts << mobo4
@@ -135,6 +146,7 @@ rig4.parts << ssdM21
 rig4.parts << psu2
 rig4.parts << cooler2
 rig4.parts << nic1
+rig4.parts << case3
 
 # assigning incompatibilities
 
@@ -153,6 +165,7 @@ mobo1.incompatibilities << ram3
 mobo1.incompatibilities << ram4
 mobo1.incompatibilities << ram5
 mobo1.incompatibilities << ssdM21
+mobo1.incompatibilities << case2
 
 cpu1.incompatibilities << mobo2
 cpu1.incompatibilities << mobo3
@@ -189,6 +202,7 @@ mobo2.incompatibilities << cpu1
 mobo2.incompatibilities << cpu3
 mobo2.incompatibilities << ram1
 mobo2.incompatibilities << ram4
+mobo2.incompatibilities << case2
 
 cpu2.incompatibilities << mobo1
 cpu2.incompatibilities << mobo3
@@ -216,6 +230,7 @@ mobo3.incompatibilities << cpu4
 mobo3.incompatibilities << cpu5
 mobo3.incompatibilities << ram1
 mobo3.incompatibilities << ram4
+mobo3.incompatibilities << case2
 
 cpu3.incompatibilities << mobo1
 cpu3.incompatibilities << mobo2
@@ -243,6 +258,8 @@ mobo4.incompatibilities << mobo5
 mobo4.incompatibilities << cpu1
 mobo4.incompatibilities << cpu3
 mobo4.incompatibilities << ram1
+mobo4.incompatibilities << case2
+mobo4.incompatibilities << case1
 
 cpu4.incompatibilities << mobo1
 cpu4.incompatibilities << mobo3
@@ -267,6 +284,7 @@ mobo5.incompatibilities << mobo4
 mobo5.incompatibilities << cpu1
 mobo5.incompatibilities << cpu3
 mobo5.incompatibilities << ram1
+mobo5.incompatibilities << case2
 
 cpu5.incompatibilities << mobo1
 cpu5.incompatibilities << mobo3
@@ -282,3 +300,9 @@ ram5.incompatibilities << ram1
 ram5.incompatibilities << ram2
 ram5.incompatibilities << ram3
 ram5.incompatibilities << ram4
+
+case2.incompatibilities << mobo1
+case2.incompatibilities << mobo2
+case2.incompatibilities << mobo3
+case2.incompatibilities << mobo4
+case2.incompatibilities << mobo5
