@@ -10,7 +10,7 @@ driveType = Parttype.create!(parttype: "drive", description: "Drive")
 psuType = Parttype.create!(parttype: "psu", description: "Power supply unit")
 coolerType = Parttype.create!(parttype: "cooler", description: "CPU Cooler")
 nicType = Parttype.create!(parttype: "nic", description: "Network Card")
-cddType = Parttype.create!(parttype: "cdd", description: "Optical Disk Drive")
+oddType = Parttype.create!(parttype: "odd", description: "Optical Disk Drive")
 
 
 
@@ -49,8 +49,11 @@ psu2 = Part.create!(name: "Corsair HX1000 ATX", description: "High output high e
 psu3 = Part.create!(name: "Novatech 850W ATX", description: "Novatech 850W ATX power supply", price: 75, spec: "850Watt")
 
 cooler1 = Part.create!(name: "Coolermaster Hyper 212 EVO", description: "Low cost cooler for the average user", price: 25, spec: "4 Copper heatpipes\nAll modern sockets\nHeight: 159mm")
-cooler1 = Part.create!(name: "Noctua NH-D15 Dual Radiator", description: "High end low noise ", price: 25, spec: "4 Copper heatpipes\nAll modern sockets\nHeight: 159mm")
+cooler2 = Part.create!(name: "Noctua NH-D15 Dual Radiator", description: "High end low noise ", price: 75, spec: "6 heatpipes\nAll modern sockets\nHeight: 165mm")
 
+odd1 = Part.create!(name: "Some disk drive", description: "Goes without saying really", price: 20, spec: "It's a disk drive")
+
+nic1 = Part.create!(name: "Some network card", description: "Network interface controller", price: 50, spec: "1GBps")
 
 # create pre-made machines
 
@@ -60,6 +63,13 @@ rig3 = Rig.create!(description: "Mid range Intel gaming rig", user_id: user1.id)
 rig4 = Rig.create!(description: "Enthusiast grade Intel workstation rig", user_id: admin1.id)
 
 # assigning types
+
+coolerType.parts << cooler1
+coolerType.parts << cooler2
+
+oddType.parts << odd1
+
+nicType.parts << nic1
 
 cpuType.parts << cpu1
 cpuType.parts << cpu2
@@ -96,6 +106,8 @@ rig1.parts << gpu1
 rig1.parts << ram1
 rig1.parts << sata1
 rig1.parts << psu1
+rig1.parts << cooler2
+rig1.parts << odd1
 
 rig2.parts << cpu2
 rig2.parts << mobo2
@@ -103,6 +115,7 @@ rig2.parts << gpu2
 rig2.parts << ram2
 rig2.parts << sata3
 rig2.parts << psu3
+rig2.parts << cooler2
 
 rig3.parts << cpu3
 rig3.parts << mobo3
@@ -110,6 +123,9 @@ rig3.parts << gpu3
 rig3.parts << ram3
 rig3.parts << ssdM21
 rig3.parts << psu2
+rig3.parts << cooler2
+rig3.parts << odd1
+rig3.parts << nic1
 
 rig4.parts << cpu4
 rig4.parts << mobo4
@@ -117,6 +133,8 @@ rig4.parts << gpu4
 rig4.parts << ram4
 rig4.parts << ssdM21
 rig4.parts << psu2
+rig4.parts << cooler2
+rig4.parts << nic1
 
 # assigning incompatibilities
 
