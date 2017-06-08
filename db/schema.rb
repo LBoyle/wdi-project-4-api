@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170603164002) do
+ActiveRecord::Schema.define(version: 20170608210215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170603164002) do
     t.text "spec"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "image"
   end
 
   create_table "parts_parttypes", id: false, force: :cascade do |t|
@@ -61,6 +62,7 @@ ActiveRecord::Schema.define(version: 20170603164002) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "rank"
+    t.text "image"
   end
 
   add_foreign_key "rigs", "users"
