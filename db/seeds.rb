@@ -8,6 +8,7 @@ cpuType = Parttype.create!(parttype: "cpu", description: "Central Processing Uni
 gpuType = Parttype.create!(parttype: "gpu", description: "Graphics Card")
 ramType = Parttype.create!(parttype: "ram", description: "Random Access Memory")
 driveType = Parttype.create!(parttype: "drive", description: "Drive")
+drive2Type = Parttype.create!(parttype: "drive2", description: "Second Drive")
 psuType = Parttype.create!(parttype: "psu", description: "Power supply unit")
 coolerType = Parttype.create!(parttype: "cooler", description: "CPU Cooler")
 nicType = Parttype.create!(parttype: "nic", description: "Network Card")
@@ -43,11 +44,16 @@ gpu2 = Part.create!(name: "Nvidia GTX1080", description: "One of Nvidia's flagsh
 gpu3 = Part.create!(name: "Nvidia GTX1060", description: "One of Nvidia's midrange graphics cards", price: 200, spec: "Architecture: 14nm Pascal\nGRAM: 4GB GDDR5\nMemory speed: 7Gbps", image: "https://images-na.ssl-images-amazon.com/images/I/51Sw903oQYL._SY300_.jpg")
 gpu4 = Part.create!(name: "Nvidia Quadro GP100", description: "One of Nvidia's high end compute cards", price: 7095, spec: "Architecture: 14nm Pascal\nGRAM: 16GB HBM2\nMemory bitrate: 4096 Bit\nShader cores: 3584", image: "https://i.ebayimg.com/images/g/J1cAAOSwol5Yz9~W/s-l300.jpg")
 
-sata1 = Part.create!(name: "Sandisk Ultra II 240GB", description: "Standard 2.5\" SSD", price: 67, spec: "2.5\"\nSATA-3\n240GB\nRead: 450 MBs\nWrite: 450 MBs", image: "http://i.ebayimg.com/images/g/bE8AAOSwPCVX5CAA/s-l300.jpg")
-sata2 = Part.create!(name: "WD Black 1TB", description: "3.5\" Storage drive", price: 71, spec: "3.5\"\nSATA-3\n1TB\nRead and Write appx 50 MBs", image: "https://askconrad.files.wordpress.com/2011/07/wd-wd1501fass.jpg")
-sata3 = Part.create!(name: "Samsung 850 EVO 120GB", description: "High quality 2.5\" SSD", price: 80, spec: "2.5\"\nSATA-3\n120GB\nRead: 500+ MBs\nWrite: 500+ MBs", image: "http://i.ebayimg.com/images/g/AmUAAOSwB09YSSvZ/s-l300.jpg")
+sataa1 = Part.create!(name: "Sandisk Ultra II 240GB", description: "Standard 2.5\" SSD", price: 67, spec: "2.5\"\nSATA-3\n240GB\nRead: 450 MBs\nWrite: 450 MBs", image: "http://i.ebayimg.com/images/g/bE8AAOSwPCVX5CAA/s-l300.jpg")
+sataa2 = Part.create!(name: "WD Black 1TB", description: "3.5\" Storage drive", price: 71, spec: "3.5\"\nSATA-3\n1TB\nRead and Write appx 50 MBs", image: "https://askconrad.files.wordpress.com/2011/07/wd-wd1501fass.jpg")
+sataa3 = Part.create!(name: "Samsung 850 EVO 120GB", description: "High quality 2.5\" SSD", price: 80, spec: "2.5\"\nSATA-3\n120GB\nRead: 500+ MBs\nWrite: 500+ MBs", image: "http://i.ebayimg.com/images/g/AmUAAOSwB09YSSvZ/s-l300.jpg")
 
-ssdM21 = Part.create!(name: "Samsung 950 EVO 500GB", description: "Top of the line NVMe M.2 SSD", price: 225, spec: "DDR3 Memory\n500GB\nNVMe M.2\nRead: 3200MBs\nWrite: 1800MBs", image: "https://images-na.ssl-images-amazon.com/images/I/51cJkRd4mmL._SY300_.jpg")
+ssdM2a1 = Part.create!(name: "Samsung 950 EVO 500GB", description: "Top of the line NVMe M.2 SSD", price: 225, spec: "DDR3 Memory\n500GB\nNVMe M.2\nRead: 3200MBs\nWrite: 1800MBs", image: "https://images-na.ssl-images-amazon.com/images/I/51cJkRd4mmL._SY300_.jpg")
+satab1 = Part.create!(name: "Sandisk Ultra II 240GB", description: "Standard 2.5\" SSD", price: 67, spec: "2.5\"\nSATA-3\n240GB\nRead: 450 MBs\nWrite: 450 MBs", image: "http://i.ebayimg.com/images/g/bE8AAOSwPCVX5CAA/s-l300.jpg")
+satab2 = Part.create!(name: "WD Black 1TB", description: "3.5\" Storage drive", price: 71, spec: "3.5\"\nSATA-3\n1TB\nRead and Write appx 50 MBs", image: "https://askconrad.files.wordpress.com/2011/07/wd-wd1501fass.jpg")
+satab3 = Part.create!(name: "Samsung 850 EVO 120GB", description: "High quality 2.5\" SSD", price: 80, spec: "2.5\"\nSATA-3\n120GB\nRead: 500+ MBs\nWrite: 500+ MBs", image: "http://i.ebayimg.com/images/g/AmUAAOSwB09YSSvZ/s-l300.jpg")
+
+ssdM2b1 = Part.create!(name: "Samsung 950 EVO 500GB", description: "Top of the line NVMe M.2 SSD", price: 225, spec: "DDR3 Memory\n500GB\nNVMe M.2\nRead: 3200MBs\nWrite: 1800MBs", image: "https://images-na.ssl-images-amazon.com/images/I/51cJkRd4mmL._SY300_.jpg")
 
 cooler1 = Part.create!(name: "Coolermaster Hyper 212 EVO", description: "Low cost cooler for the average user", price: 25, spec: "4 Copper heatpipes\nAll modern sockets\nHeight: 159mm", image: "http://i.ebayimg.com/images/g/RQUAAOSwG-1W1Mma/s-l300.jpg")
 cooler2 = Part.create!(name: "Noctua NH-D15 Dual Radiator", description: "High end low noise ", price: 75, spec: "6 heatpipes\nAll modern sockets\nHeight: 165mm", image: "http://2.grgs.ro/images/products/1/750014/843433/normal/nh-d15-dbc37f9ada038ea74f272126298854e0.jpg")
@@ -102,10 +108,14 @@ ramType.parts << ram2
 ramType.parts << ram3
 ramType.parts << ram4
 ramType.parts << ram5
-driveType.parts << sata1
-driveType.parts << sata2
-driveType.parts << sata3
-driveType.parts << ssdM21
+driveType.parts << sataa1
+driveType.parts << sataa2
+driveType.parts << sataa3
+driveType.parts << ssdM2a1
+drive2Type.parts << satab1
+drive2Type.parts << satab2
+drive2Type.parts << satab3
+drive2Type.parts << ssdM2b1
 psuType.parts << psu1
 psuType.parts << psu2
 psuType.parts << psu3
@@ -119,7 +129,7 @@ rig1.parts << cpu1
 rig1.parts << mobo1
 rig1.parts << gpu1
 rig1.parts << ram1
-rig1.parts << sata1
+rig1.parts << sataa1
 rig1.parts << psu1
 rig1.parts << cooler2
 rig1.parts << odd1
@@ -129,7 +139,7 @@ rig2.parts << cpu2
 rig2.parts << mobo2
 rig2.parts << gpu2
 rig2.parts << ram2
-rig2.parts << sata3
+rig2.parts << sataa3
 rig2.parts << psu3
 rig2.parts << cooler2
 rig2.parts << case1
@@ -138,7 +148,8 @@ rig3.parts << cpu3
 rig3.parts << mobo3
 rig3.parts << gpu3
 rig3.parts << ram3
-rig3.parts << ssdM21
+rig3.parts << ssdM2a1
+rig3.parts << satab1
 rig3.parts << psu2
 rig3.parts << cooler2
 rig3.parts << odd1
@@ -149,7 +160,7 @@ rig4.parts << cpu4
 rig4.parts << mobo4
 rig4.parts << gpu4
 rig4.parts << ram4
-rig4.parts << ssdM21
+rig4.parts << ssdM2a1
 rig4.parts << psu2
 rig4.parts << cooler2
 rig4.parts << nic1
@@ -157,7 +168,8 @@ rig4.parts << case3
 
 # assigning incompatibilities
 
-ssdM21.incompatibilities << mobo1
+ssdM2a1.incompatibilities << mobo1
+ssdM2b1.incompatibilities << mobo1
 
 # mobo1.incompatibilities << mobo2
 # mobo1.incompatibilities << mobo3
@@ -171,7 +183,8 @@ mobo1.incompatibilities << ram2
 mobo1.incompatibilities << ram3
 mobo1.incompatibilities << ram4
 mobo1.incompatibilities << ram5
-mobo1.incompatibilities << ssdM21
+mobo1.incompatibilities << ssdM2a1
+mobo1.incompatibilities << ssdM2b1
 mobo1.incompatibilities << case2
 
 cpu1.incompatibilities << mobo2
