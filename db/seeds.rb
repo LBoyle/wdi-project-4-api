@@ -170,10 +170,6 @@ rig4.parts << case3
 ssdM2a1.incompatibilities << mobo1
 ssdM2b1.incompatibilities << mobo1
 
-# mobo1.incompatibilities << mobo2
-# mobo1.incompatibilities << mobo3
-# mobo1.incompatibilities << mobo4
-# mobo1.incompatibilities << mobo5
 mobo1.incompatibilities << cpu2
 mobo1.incompatibilities << cpu3
 mobo1.incompatibilities << cpu4
@@ -190,10 +186,6 @@ cpu1.incompatibilities << mobo2
 cpu1.incompatibilities << mobo3
 cpu1.incompatibilities << mobo4
 cpu1.incompatibilities << mobo5
-# cpu1.incompatibilities << cpu2
-# cpu1.incompatibilities << cpu3
-# cpu1.incompatibilities << cpu4
-# cpu1.incompatibilities << cpu5
 cpu1.incompatibilities << ram2
 cpu1.incompatibilities << ram3
 cpu1.incompatibilities << ram4
@@ -207,16 +199,7 @@ ram1.incompatibilities << cpu2
 ram1.incompatibilities << cpu3
 ram1.incompatibilities << cpu4
 ram1.incompatibilities << cpu5
-# ram1.incompatibilities << ram2
-# ram1.incompatibilities << ram3
-# ram1.incompatibilities << ram4
-# ram1.incompatibilities << ram5
 
-
-# mobo2.incompatibilities << mobo1
-# mobo2.incompatibilities << mobo3
-# mobo2.incompatibilities << mobo4
-# mobo2.incompatibilities << mobo5
 mobo2.incompatibilities << cpu1
 mobo2.incompatibilities << cpu6
 mobo2.incompatibilities << cpu3
@@ -226,25 +209,13 @@ mobo2.incompatibilities << case2
 
 cpu2.incompatibilities << mobo1
 cpu2.incompatibilities << mobo3
-# cpu2.incompatibilities << cpu1
-# cpu2.incompatibilities << cpu3
-# cpu2.incompatibilities << cpu4
 cpu2.incompatibilities << ram1
 cpu2.incompatibilities << ram4
 
 ram2.incompatibilities << mobo1
 ram2.incompatibilities << cpu1
 ram2.incompatibilities << cpu6
-# ram2.incompatibilities << ram1
-# ram2.incompatibilities << ram3
-# ram2.incompatibilities << ram4
-# ram2.incompatibilities << ram5
 
-
-# mobo3.incompatibilities << mobo1
-# mobo3.incompatibilities << mobo2
-# mobo3.incompatibilities << mobo4
-# mobo3.incompatibilities << mobo5
 mobo3.incompatibilities << cpu1
 mobo3.incompatibilities << cpu2
 mobo3.incompatibilities << cpu4
@@ -258,26 +229,13 @@ cpu3.incompatibilities << mobo1
 cpu3.incompatibilities << mobo2
 cpu3.incompatibilities << mobo4
 cpu3.incompatibilities << mobo5
-# cpu3.incompatibilities << cpu1
-# cpu3.incompatibilities << cpu2
-# cpu3.incompatibilities << cpu4
-# cpu3.incompatibilities << cpu5
 cpu3.incompatibilities << ram1
 cpu3.incompatibilities << ram4
 
 ram3.incompatibilities << mobo1
 ram3.incompatibilities << cpu1
 ram3.incompatibilities << cpu6
-# ram3.incompatibilities << ram1
-# ram3.incompatibilities << ram2
-# ram3.incompatibilities << ram4
-# ram3.incompatibilities << ram5
 
-
-# mobo4.incompatibilities << mobo1
-# mobo4.incompatibilities << mobo2
-# mobo4.incompatibilities << mobo3
-# mobo4.incompatibilities << mobo5
 mobo4.incompatibilities << cpu1
 mobo4.incompatibilities << cpu3
 mobo4.incompatibilities << cpu6
@@ -287,25 +245,12 @@ mobo4.incompatibilities << case1
 
 cpu4.incompatibilities << mobo1
 cpu4.incompatibilities << mobo3
-# cpu4.incompatibilities << cpu1
-# cpu4.incompatibilities << cpu2
-# cpu4.incompatibilities << cpu3
-# cpu4.incompatibilities << cpu5
 cpu4.incompatibilities << ram1
 
 ram4.incompatibilities << mobo1
 ram4.incompatibilities << cpu1
 ram4.incompatibilities << cpu6
-# ram4.incompatibilities << ram1
-# ram4.incompatibilities << ram2
-# ram4.incompatibilities << ram3
-# ram4.incompatibilities << ram5
 
-
-# mobo5.incompatibilities << mobo1
-# mobo5.incompatibilities << mobo2
-# mobo5.incompatibilities << mobo3
-# mobo5.incompatibilities << mobo4
 mobo5.incompatibilities << cpu1
 mobo5.incompatibilities << cpu3
 mobo5.incompatibilities << cpu6
@@ -314,19 +259,11 @@ mobo5.incompatibilities << case2
 
 cpu5.incompatibilities << mobo1
 cpu5.incompatibilities << mobo3
-# cpu5.incompatibilities << cpu1
-# cpu5.incompatibilities << cpu2
-# cpu5.incompatibilities << cpu3
-# cpu5.incompatibilities << cpu4
 cpu5.incompatibilities << ram1
 
 ram5.incompatibilities << mobo1
 ram5.incompatibilities << cpu1
 ram5.incompatibilities << cpu6
-# ram5.incompatibilities << ram1
-# ram5.incompatibilities << ram2
-# ram5.incompatibilities << ram3
-# ram5.incompatibilities << ram4
 
 case2.incompatibilities << mobo1
 case2.incompatibilities << mobo2
@@ -338,10 +275,6 @@ cpu6.incompatibilities << mobo2
 cpu6.incompatibilities << mobo3
 cpu6.incompatibilities << mobo4
 cpu6.incompatibilities << mobo5
-# cpu6.incompatibilities << cpu2
-# cpu6.incompatibilities << cpu3
-# cpu6.incompatibilities << cpu4
-# cpu6.incompatibilities << cpu5
 cpu6.incompatibilities << ram2
 cpu6.incompatibilities << ram3
 cpu6.incompatibilities << ram4
