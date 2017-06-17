@@ -18,12 +18,14 @@ oddType = Parttype.create!(parttype: "odd", description: "Optical Disk Drive")
 case1 = Part.create!(name: "Phanteks Eclipse P400 Tempered grey", description: "Tempered glass panel", price: 75, spec: "ATX,6x 3.5\",2x 2.5\",2x USB 3.0,2x 120mm fan,PSU not included,transparent side panel,grey", image: "https://m.media-amazon.com/images/S/aplus-media/vc/23deaacd-2aa7-4079-ac33-3e912a6e00fc._SR300,300_.jpeg")
 case2 = Part.create!(name: "Vultech CUBE-X1B White", description: "Small and sturdy", price: 32, spec: "Plexiglass,Stainless steel,Top,1x 120 mm,Micro-ATX,Mini-ATX", image: "http://www.informaticab2b.it/files/Foto/208246_1.JPG")
 case3 = Part.create!(name: "Coolermaster Cosmos 2 Ultra Ultimate", description: "Massive", price: 305, spec: "SSI-EEB,EATX,ATX,USB3.0,Many fans,Such drives,So space", image: "http://i.ebayimg.com/00/s/NjUwWDY1MA==/z/f4cAAOSwuxFYtEnV/$_35.JPG?set_id=880000500F")
+case4 = Part.create!(name: "Corsair Carbide Air 240", description: "Massive", price: 95, spec: "ATX,MicroATX,USB3.0,Many fans,Such drives,So space", image: "http://i.ebayimg.com/images/g/YFUAAOSwY0lXR7e-/s-l300.jpg")
 
 mobo1 = Part.create!(name: "GA970A-DS3P AMD", description: "Gigabyte AM3+ motherboard", price: 60, spec: "AM3+,DDR3 non-ecc,No onboard graphics", image: "https://www.allstarshop.com/shop/assets/product_images/80058024c.jpg")
 mobo2 = Part.create!(name: "MSI X99A SLI ATX Intel", description: "MSI LGA2011-v3 high end motherboard", price: 220, spec: "LGA2011-v3,DDR4 non-ecc,No onboard graphics", image: "http://i.ebayimg.com/images/g/2EUAAOSwTglYkTpt/s-l300.jpg")
 mobo3 = Part.create!(name: "ROG Strix Z270E Gaming Intel", description: "ROG Strix Intel high end gaming motherboard", price: 190, spec: "FCLGA1151,DDR4 non-ecc,No onboard graphics", image: "http://i.ebayimg.com/images/g/Q6QAAOSwUKxYjAxV/s-l300.jpg")
 mobo4 = Part.create!(name: "ASUS ROG RAMPAGE V EDITION 10 Intel", description: "ASUS ROG Top end motherboard", price: 500, spec: "LGA2011-v3,DDR4 ECC supported,No onboard graphics", image: "http://i.ebayimg.com/images/g/yswAAOSwUKxYdNjU/s-l300.jpg")
 mobo5 = Part.create!(name: "MSI X99A GODLIKE Intel", description: "MSI High end motherboard", price: 450, spec: "LGA2011-v3,DDR4 non-ecc,No onboard graphics", image: "http://i.ebayimg.com/images/g/-7oAAOSw4CFYuaHe/s-l300.jpg")
+mobo6 = Part.create!(name: "ASUS Z170P Gaming", description: "ASUS Skylake Intel high end gaming motherboard", price: 110, spec: "FCLGA1151,DDR4 non-ecc,Onboard graphics", image: "http://images2.compsource.com/epics/300/1031211233.jpg")
 
 cpu1 = Part.create!(name: "AMD FX6300", description: "AMD mid-tier six core cpu", price: 72, spec: "Cores: 6,Clock speed: 3.5GHz,AM3+ socket", image: "https://www.dateks.lv/images/pic/300/300/132/51.jpg")
 cpu6 = Part.create!(name: "AMD FX8370", description: "AMD Piledriver 8 core cpu", price: 72, spec: "Cores: 8,Clock speed: 4.3GHz,AM3+ socket", image: "http://i.ebayimg.com/images/g/cvkAAOSwXYtY0Iuj/s-l300.jpg")
@@ -31,6 +33,7 @@ cpu2 = Part.create!(name: "Intel Core i7-5960X", description: "Intel maxed out E
 cpu3 = Part.create!(name: "Intel Core i7-7700K", description: "7th gen 4c/8t desperate for cash", price: 305, spec: "Cores: 4,Threads: 8,Clock speed: 4.2 to 4.5GHz,FCLGA1151 socket", image: "https://images-na.ssl-images-amazon.com/images/I/51QYjUBfl6L._SY300_.jpg")
 cpu4 = Part.create!(name: "Intel Xeon E5-4669V3", description: "Among the best multicore cpus ever released to date, server grade, adapted for enthusiasts", price: 7000, spec: "Cores: 18,Threads: 36,Clock speed: 2.1 to 2.9GHz,LGA2011-v3 socket,40 pci-e lanes", image: "https://cdn.shopify.com/s/files/1/1613/5703/products/V3-4669V3_large.jpg?v=1480244139")
 cpu5 = Part.create!(name: "Intel Core i7 6800K", description: "High end Intel consumer CPU", price: 440, spec: "Cores: 6,Threads: 12,Clock speed: 3.4 to 3.6GHz,LGA2011-v3 socket,28 pci-e lanes", image: "https://www.pckuwait.com/wp-content/uploads/2016/07/300-1-3.jpg")
+cpu7 = Part.create!(name: "Intel Core i7 6700K", description: "High end Intel consumer CPU", price: 350, spec: "Cores: 4,Threads: 8,Clock speed: 4.0 to 4.2GHz,FCLGA1151 socket,16 pci-e lanes,Intel HD530 graphics", image: "http://i.ebayimg.com/images/g/ysEAAOSwkl5Xchs2/s-l300.jpg")
 
 ram1 = Part.create!(name: "Corsair HyperX DDR3 2x8GB - dual channel", description: "Corsair mid-range unbuffered overclocking ram", price: 130, spec: "Capacity: DDR3,16GB,Speed: 2400MHz,Unbuffered", image: "https://images-na.ssl-images-amazon.com/images/I/51OOWqdYvNL._SY300_.jpg")
 ram2 = Part.create!(name: "G.Skill Ripjaws V DDR4 2x4GB - dual channel", description: "G.Skill high-end unbuffered overclocking ram", price: 75, spec: "Capacity: DDR4,8GB,Speed: 2400MHz,Unbuffered", image: "https://images-na.ssl-images-amazon.com/images/I/41z2%2BvB0YnL._SY300_.jpg")
@@ -42,12 +45,14 @@ gpu1 = Part.create!(name: "AMD RX480", description: "One of AMD's flagship graph
 gpu2 = Part.create!(name: "Nvidia GTX1080", description: "One of Nvidia's flagship graphics cards", price: 650, spec: "Architecture: 14nm Pascal,GRAM: 8GB GDDR5X,Memory speed: 10Gbps", image: "http://assets.nvidia.com/warehouse/products/public/graphics-card/pny-geforce-gtx-1080-ti-founders-edition-36273589-1.jpg")
 gpu3 = Part.create!(name: "Nvidia GTX1060", description: "One of Nvidia's midrange graphics cards", price: 200, spec: "Architecture: 14nm Pascal,GRAM: 4GB GDDR5,Memory speed: 7Gbps", image: "https://images-na.ssl-images-amazon.com/images/I/51Sw903oQYL._SY300_.jpg")
 gpu4 = Part.create!(name: "Nvidia Quadro GP100", description: "One of Nvidia's high end compute cards", price: 7095, spec: "Architecture: 14nm Pascal,GRAM: 16GB HBM2,Memory bitrate: 4096 Bit,Shader cores: 3584", image: "https://i.ebayimg.com/images/g/J1cAAOSwol5Yz9~W/s-l300.jpg")
+gpu5 = Part.create!(name: "AMD RX 580", description: "One of AMD's high end compute cards", price: 275, spec: "Architecture: 14nm Polaris,GRAM: 8GB GDDR5,Shader cores: 2304", image: "https://i.ebayimg.com/images/g/ZJUAAOSw3ZRY-MrA/s-l300.png")
 
 sataa1 = Part.create!(name: "Sandisk Ultra II 240GB", description: "Standard 2.5\" SSD", price: 67, spec: "2.5\",SATA-3,240GB,Read: 450 MBs,Write: 450 MBs", image: "http://i.ebayimg.com/images/g/bE8AAOSwPCVX5CAA/s-l300.jpg")
 sataa2 = Part.create!(name: "WD Black 1TB", description: "3.5\" Storage drive", price: 71, spec: "3.5\",SATA-3,1TB,Read and Write appx 50 MBs", image: "https://askconrad.files.wordpress.com/2011/07/wd-wd1501fass.jpg")
 sataa3 = Part.create!(name: "Samsung 850 EVO 120GB", description: "High quality 2.5\" SSD", price: 80, spec: "2.5\",SATA-3,120GB,Read: 500+ MBs,Write: 500+ MBs", image: "http://i.ebayimg.com/images/g/AmUAAOSwB09YSSvZ/s-l300.jpg")
 
 ssdM2a1 = Part.create!(name: "Samsung 950 EVO 500GB", description: "Top of the line NVMe M.2 SSD", price: 225, spec: "DDR3 Memory,500GB,NVMe M.2,Read: 3200MBs,Write: 1800MBs", image: "https://images-na.ssl-images-amazon.com/images/I/51cJkRd4mmL._SY300_.jpg")
+
 satab1 = Part.create!(name: "Sandisk Ultra II 240GB", description: "Standard 2.5\" SSD", price: 67, spec: "2.5\",SATA-3,240GB,Read: 450 MBs,Write: 450 MBs", image: "http://i.ebayimg.com/images/g/bE8AAOSwPCVX5CAA/s-l300.jpg")
 satab2 = Part.create!(name: "WD Black 1TB", description: "3.5\" Storage drive", price: 71, spec: "3.5\",SATA-3,1TB,Read and Write appx 50 MBs", image: "https://askconrad.files.wordpress.com/2011/07/wd-wd1501fass.jpg")
 satab3 = Part.create!(name: "Samsung 850 EVO 120GB", description: "High quality 2.5\" SSD", price: 80, spec: "2.5\",SATA-3,120GB,Read: 500+ MBs,Write: 500+ MBs", image: "http://i.ebayimg.com/images/g/AmUAAOSwB09YSSvZ/s-l300.jpg")
@@ -93,15 +98,18 @@ cpuType.parts << cpu3
 cpuType.parts << cpu4
 cpuType.parts << cpu5
 cpuType.parts << cpu6
+cpuType.parts << cpu7
 moboType.parts << mobo1
 moboType.parts << mobo2
 moboType.parts << mobo3
 moboType.parts << mobo4
 moboType.parts << mobo5
+moboType.parts << mobo6
 gpuType.parts << gpu1
 gpuType.parts << gpu2
 gpuType.parts << gpu3
 gpuType.parts << gpu4
+gpuType.parts << gpu5
 ramType.parts << ram1
 ramType.parts << ram2
 ramType.parts << ram3
@@ -121,6 +129,7 @@ psuType.parts << psu3
 caseType.parts << case1
 caseType.parts << case2
 caseType.parts << case3
+caseType.parts << case4
 
 # creating pre-builts
 
@@ -174,6 +183,7 @@ mobo1.incompatibilities << cpu2
 mobo1.incompatibilities << cpu3
 mobo1.incompatibilities << cpu4
 mobo1.incompatibilities << cpu5
+mobo1.incompatibilities << cpu6
 mobo1.incompatibilities << ram2
 mobo1.incompatibilities << ram3
 mobo1.incompatibilities << ram4
@@ -186,6 +196,7 @@ cpu1.incompatibilities << mobo2
 cpu1.incompatibilities << mobo3
 cpu1.incompatibilities << mobo4
 cpu1.incompatibilities << mobo5
+cpu1.incompatibilities << mobo6
 cpu1.incompatibilities << ram2
 cpu1.incompatibilities << ram3
 cpu1.incompatibilities << ram4
@@ -195,6 +206,7 @@ ram1.incompatibilities << mobo2
 ram1.incompatibilities << mobo3
 ram1.incompatibilities << mobo4
 ram1.incompatibilities << mobo5
+ram1.incompatibilities << mobo6
 ram1.incompatibilities << cpu2
 ram1.incompatibilities << cpu3
 ram1.incompatibilities << cpu4
@@ -279,3 +291,14 @@ cpu6.incompatibilities << ram2
 cpu6.incompatibilities << ram3
 cpu6.incompatibilities << ram4
 cpu6.incompatibilities << ram5
+
+cpu7.incompatibilities << mobo1
+cpu7.incompatibilities << mobo2
+cpu7.incompatibilities << mobo3
+cpu7.incompatibilities << mobo5
+cpu7.incompatibilities << ram1
+
+mobo6.incompatibilities << cpu1
+mobo6.incompatibilities << cpu3
+mobo6.incompatibilities << cpu6
+mobo6.incompatibilities << ram1
